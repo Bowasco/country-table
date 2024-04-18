@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div>
+            <select id="country">
+                <option value="">Select a country</option>
+            </select>
+        </div>
+        <div id="dispCoat"></div>
+    </main>
+</body>
+</html>
+<script>
+    let picking = document.getElementById("pick")
+    let dispCoat = document.getElementById('dispCoat')
+    let allCountry = []
+
+    fetch("https://restcountries.com/v3.1/all")
+    .then(result => result.json())
+    .then(country => {
+
+        console.log(country);
+        
+        country.forEach(element => {
+            allCountry.push(element.name.common)
+
+            dispCoat.innerHTML += `
+            <img width = "100" src ="${element.coatOfArms.png}" />
+            <span>${element.name.common}</span>
+            `
+
+        });
+        dispCountry()
+    })
+    function dispCountry(){
+            allCountry.sort().forEach(el =>{
+                country.innerHTML += `
+                <option>${el}</option>
+                `
+            })
+        }
+
+
+</script>

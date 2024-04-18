@@ -1,0 +1,23 @@
+{
+  "users": [
+    {
+      "id": "88dc",
+      "username": "Daniel",
+      "email": "daniel@gmail.com",
+      "password": "1234567"
+    },
+    {
+      "id": "2ae8",
+      "username": "Samuel",
+      "email": "samuel@gmail.com",
+      "password": "samuel"
+    },
+    {
+      "id": "8232",
+      "username": "Person",
+      "email": "person@gmail.com",
+      "password": "000000000"
+    }
+  ],
+  "posts": []
+}
